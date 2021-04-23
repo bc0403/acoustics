@@ -14,23 +14,20 @@ Acoustics is the study of time-varying deformations in material media. Particle 
 
 ### Strain
 
-**Strain field ($\mathbf S$)** can be derived from particle displacement as
+**Strain field ($\mathbf S$)** is derived from particle displacement as
 $$
 S_{ij}(\mathbf r, t)=\frac{1}{2}(\frac{\partial u_i}{\partial r_j} + \frac{\partial u_j}{\partial r_i})
 $$
-where $\mathbf r$ is the position vector, $\mathbf r = \hat xx + \hat yy + \hat zz$
+where $\mathbf r$ is the position vector, $\mathbf r = \mathbf{\hat x}x + \mathbf{\hat y}y + \mathbf{\hat z}z$.
 
-## Wave Propagating and Polarization
+### Stress
 
-Polarization is the time-varying direction of $\mathbf u$. For example, when the acoustic wave propagates along $y$ direction, there are three basic polarizations (two pure **shear** and one pure **longitudinal**):
+Stress field ($\mathbf T$) is derived from paticle displacement and external force
+$$
+\nabla \cdot \mathbf T = \rho \frac{\partial^2\mathbf u}{\partial t^2} - \mathbf F
+$$
 
-<img src="basic_concepts.assets/image-20210423093901548.png" alt="image-20210423093901548" style="zoom:33%;" />
-
-## Transformation
-
-
-
-## Symbolic Notation
+## Symbolic Notation for Abbreviated System
 
 * The shape of $\mathbf u$ is (3, 1);
 
@@ -71,7 +68,112 @@ Polarization is the time-varying direction of $\mathbf u$. For example, when the
   \frac{\partial}{\partial y} & \frac{\partial}{\partial x} & 0 \\
   \end{bmatrix}
   $$
-  
+  and
+  $$
+  \nabla_{iJ}T_J = \rho \frac{\partial^2 u_i}{\partial t^2} - F_i
+  $$
+  where
+  $$
+  \nabla_{iJ} = \widetilde{\nabla_{Ij}}
+  $$
+  where the tilde ($\sim$) designates a *transposed matrix*.
+
+## Wave Propagating and Polarization
+
+Polarization is the time-varying direction of $\mathbf u$. For example, when the acoustic wave propagates along $y$ direction, there are three basic polarizations (two pure **shear** and one pure **longitudinal**):
+
+<img src="basic_concepts.assets/image-20210423093901548.png" alt="image-20210423093901548" style="zoom:33%;" />
+
+In a source-free region ($\mathbf F = 0$), a uniform plane wave propagating along the direction
+$$
+\mathbf{\hat l} = \mathbf{\hat{x}}l_x +\mathbf{\hat{y}}l_y + \mathbf{\hat{z}}l_z
+$$
+has fields proportional to $e^{i{\omega t - k\mathbf{\hat{l}}\cdot \mathbf{r}}}$. In this case $\nabla_{iK}$ and $\nabla_{Lj}$ may be replaced by matrics $-ik_{iK}$ and $-ik_{Lj}$, respectively, where
+$$
+-ik_{iK} = -ikl_{iK}=-ik\begin{bmatrix}
+l_x & 0 & 0 & 0 & l_z & l_y \\
+0 & l_y & 0 & l_z & 0 & l_x \\
+0 & 0 & l_z & l_y & l_x & 0 \\
+\end{bmatrix}
+$$
+and
+$$
+-ik_{Lj} = -ikl_{Lj}=-ik\widetilde{l_{iK}}
+$$
+the wave equation (**Christoffel Equation**) can be written as 
+$$
+k^2\Gamma_{ij}v_{j} = \rho\omega^2v_i
+$$
+where $v_i$ is the acoustic velocity and $\Gamma_{ij}$ is called **Christoffel matrix**, and 
+$$
+\Gamma_{ij} = l_{iK}c_{KL}l_{Lj}
+$$
+where $c_{KL}$ is the stiffness constants of material.
+
+
+
+## Piezoelectric Equations
+
+The **piezoelectric stress equations** are
+$$
+\mathbf{T} = -\mathbf{e}_t\cdot\mathbf{E} + \mathbf{c}^E:\mathbf{S} \\
+\mathbf{D} = \mathbf{\epsilon}^S\cdot\mathbf{E} + \mathbf{e}:\mathbf{S}
+$$
+where $\mathbf{e}$ and $\mathbf{e}_t$ are the **piezoelectric stress constant**, $\epsilon^S$ the **permittivity at zero or constant strain**, $\mathbf{c}^E$ the **stiffness at constant electric** field.
+
+Christoffel Equation has exactly the same form but with $c_{KL}$ replaced by the **piezoelectrically stiffened elastic constant** $c_{KL}^D$
+$$
+c^D_{KL}=c^E_{KL} + \frac{[e_{Kj}l_j][l_ie_{iL}]}{l_i\epsilon^S_{ij}l_j}
+$$
+
+## Transformation with Abbreviated Subscripts
+
+* Only rectangular coordinates and only right-handed coordinate systems are considered.
+
+* The old and new coordinates are taken to be $x, y, z$ and $x', y', z'$, respectively, where the relative orientation of the two sets of axes is described by the direction cosines $a_{ij}$ defined in following figure:
+
+  <img src="basic_concepts.assets/image-20210423102211684.png" alt="image-20210423102211684" style="zoom:33%;" />
+
+  For a clockwise rotation of the coordinate axes through an angle $\xi$ about the $z$ axis, the **transformation matrix** is:
+  $$
+  [a] = \begin{bmatrix}
+  \cos\xi & \sin\xi & 0 \\
+  -\sin\xi & \cos\xi & 0 \\
+  0 & 0 & 1\\
+  \end{bmatrix}
+  $$
+  Suppose that a **given vector** $\mathbf v$ is represented by components $v_x, v_y, v_z$ relative to the old coordinate axes and by components $v'_x, v'_y, v'_z $ relative to the new coordinate axes, then
+  $$
+  \mathbf v' = [a]\mathbf v
+  $$
+
+* For abbreviated subscripts, define a new **transformation matrix**:
+  $$
+  [M] = \begin{bmatrix}
+  a^2_{xx} & a^2_{xy} & a^2_{xz} & 2a_{xy}a_{xz} & 2a_{xz}a_{xx} & 2a_{xx}a_{xy}\\
+  a^2_{yx} & a^2_{yy} & a^2_{yz} & 2a_{yy}a_{yz} & 2a_{yz}a_{yx} & 2a_{yx}a_{yy}\\
+  a^2_{zx} & a^2_{zy} & a^2_{zz} & 2a_{zy}a_{zz} & 2a_{zz}a_{zx} & 2a_{zx}a_{zy}\\
+  a_{yx}a_{zx} & a_{yy}a_{zy} & a_{yz}a_{zz} & a_{yy}a_{zz} + a_{yz}a_{zy} & a_{yx}a_{zz} + a_{yz}a_{zx} & a_{yy}a_{zx} + a_{yx}a_{zy}\\
+  a_{zx}a_{xx} & a_{zy}a_{xy} & a_{zz}a_{xz} & a_{xy}a_{zz} + a_{xz}a_{zy} & a_{xz}a_{zx} + a_{xx}a_{zz} & a_{xx}a_{zy} + a_{xy}a_{zx} \\
+  a_{xx}a_{yx} & a_{xy}a_{yy} & a_{xz}a_{yz} & a_{xy}a_{yz} + a_{xz}a_{yy} & a_{xz}a_{yx} + a_{xx}a_{yz} & a_{xx}a_{yy} + a_{xy}a_{yx} \\
+  \end{bmatrix}
+  $$
+
+* Transformation for material properties 
+
+$$
+[c'] = [M][c]\widetilde{[M]}
+$$
+
+$$
+[\epsilon'] = [a][\epsilon]\widetilde{[a]}
+$$
+
+$$
+[e'] = [a][e]\widetilde{[M]}
+$$
+
+
 
 ## References
 
