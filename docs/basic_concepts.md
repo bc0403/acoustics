@@ -175,6 +175,22 @@ $$
 
 
 
+## Euler Angles and Cystal Cut
+
+The Euler Angles are three angles introduced by Leonhard Euler to describe the orientation of a rigid body with respect to a fixed coordinate system.
+
+Euler angles are typically denoted as $\alpha, \beta, \gamma$, as shown in the following figure:
+
+<img src="basic_concepts.assets/image-20210423160448869.png" alt="image-20210423160448869" style="zoom:33%;" />
+
+1. Rotate axes (**passive transformation**), not a vector (active transformation). A vector in the new axes $\mathbf{v}'$ can be represented by the rotational maxtix ($[a]$) and its components in old axes ($v$): $\mathbf{v}' = [a]\mathbf{v}$.
+2. **Right-hand rule**: the rotation angle is defined to be positive for rotation that is counter-clockwise when viewed by an observer looking along the rotation axis towards the origin.
+3. *z-x-z​* rotation
+
 ## References
 
 * Auld, B. A. (1973). *Acoustic fields and waves in solids*. John Wiley & Sons.
+
+* https://en.wikipedia.org/wiki/Euler_angles
+
+  

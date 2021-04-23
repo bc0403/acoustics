@@ -11,7 +11,7 @@ This repository contains some notes and applications about how to analysis and d
 
 ## Description
 
-* `/docs` includes technical notes
+* `/docs` includes technical notes, please open the `md` files with [typora](https://www.typora.io) to display equations correctly.
 
 
 
