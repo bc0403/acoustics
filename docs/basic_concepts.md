@@ -119,7 +119,7 @@ $$
 \mathbf{T} = -\mathbf{e}_t\cdot\mathbf{E} + \mathbf{c}^E:\mathbf{S} \\
 \mathbf{D} = \mathbf{\epsilon}^S\cdot\mathbf{E} + \mathbf{e}:\mathbf{S}
 $$
-where $\mathbf{e}$ and $\mathbf{e}_t$ are the **piezoelectric stress constant**, $\epsilon^S$ the **permittivity at zero or constant strain**, $\mathbf{c}^E$ the **stiffness at constant electric** field.
+where $\mathbf{e}$ and $\mathbf{e}_t$ (transpose of $\mathbf{e}$) are the **piezoelectric stress constant**, $\epsilon^S$ the **permittivity at zero or constant strain**, $\mathbf{c}^E$ the **stiffness at constant electric** field.
 
 Christoffel Equation has exactly the same form but with $c_{KL}$ replaced by the **piezoelectrically stiffened elastic constant** $c_{KL}^D$
 $$

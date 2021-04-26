@@ -1,6 +1,9 @@
 # added by hjin
 .vscode
 .DS_Store
+docs_2/
+comsol/
+ADS/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

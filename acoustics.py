@@ -226,6 +226,7 @@ class Isotropic():
 class Cubic():
     """
     acoustic properties for Cubic materials
+    Al, Au, Ag, Ni, W
     """
 
     # refer to pages 362, 374, 379, Auld's book
@@ -254,6 +255,7 @@ class Cubic():
 class Trig3m():
     """
     acoustic properties for Trig. 3m materials
+    LiNbO_3, LiTaO_3
     """
 
     # refer to pages 362, 373, 379, Auld's book
@@ -282,6 +284,7 @@ class Trig3m():
 class Trig32():
     """
     acoustic properties for Trig. 32 materials
+    Quartz
     """
 
     # refer to pages 362, 373, 379, Auld's book
@@ -310,6 +313,7 @@ class Trig32():
 class Hex6mm():
     """
     acoustic properties for Hex. 6mm materials
+    AlN, ZnO
     """
 
     # refer to pages 362, 373, 379, Auld's book
@@ -444,7 +448,7 @@ AlN_comsol = {  # Hex. 6mm
     "eSzz": 9*epsilon_0
 }
 
-# data from Comsol Multiphysics 5.5
+# data from Comsol Multiphysics 5.6
 PVDF_comsol = {
     "rho": 1780e3,  # g/m^3
     "c11": 3.8e9,  # Pa
