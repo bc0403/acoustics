@@ -47,6 +47,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         self.Np = int(2*self.freq/self.nbw)
         self.lineEdit_Np.setText(str(self.Np))
     
+    # calculate the aperture
     def cal_aperture(self):
         temp_a = (1/self.res)*(1/(2*self.freq*1e-4*self.Co*self.Np))*(4*self.K2*self.Np)
         temp_b = ((4*self.K2*self.Np)**2 + np.pi**2)
