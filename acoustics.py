@@ -170,6 +170,14 @@ class PiezoMaterial(ElasticMaterial):
         """
         super().rot_update(R, M)
         self.piezoelec = R*self.piezoelec*M.T
+    
+    def rot_euler_update(self, alpha, beta, gamma):
+        """
+        rotate by Z(alpha)-X(beta)-Z(gamma) euler angles,
+        update matrices of stiffness and epsilon
+        """
+        R, M = super().rot_euler_RM(alpha, beta, gamma)
+        self.rot_update(R, M)
 
     def cal_cD(self, li, lj):
         """

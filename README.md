@@ -16,6 +16,10 @@ This repository contains some notes and applications about how to analysis and d
 * `impulse.py` use **impulse model design method** to design the SAW delay line device
 
   <img src="README.assets/impuse_gui.png" alt="impuse_gui" style="zoom:50%;" />
+  
+* `euler.py` calculate the materials properties after **Euler Angels Rotation**
+
+  <img src="README.assets/euler_gui.png" alt="euler_gui" style="zoom:33%;" />
 
 ## References
 
@@ -24,5 +28,8 @@ This repository contains some notes and applications about how to analysis and d
 1. Hartmann, C. S., Bell, D. T., & Rosenfeld, R. C. (1973). Impulse Model Design of Acoustic Surface-Wave Filters. IEEE Transactions on Microwave Theory and Techniques, 21(4), 162–175. https://doi.org/10.1109/TMTT.1973.1127967
 2. Wilson, W. C., & Atkinson, G. M. (2007). Rapid SAW sensor development tools. NASA Tech Reports, 1–7.
 
+=== **Euler angels rotation** ===
 
+1. Auld, B. A. (1973). *Acoustic fields and waves in solids*. John Wiley & Sons.
+2. https://en.wikipedia.org/wiki/Euler_angles
 
