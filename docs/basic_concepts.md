@@ -177,7 +177,7 @@ $$
 
 ## Euler Angles and Cystal Cut
 
-The Euler Angles are three angles introduced by Leonhard Euler to describe the orientation of a rigid body with respect to a fixed coordinate system.
+The Euler Angles are three angles introduced by `Leonhard Euler` to describe the orientation of a rigid body with respect to a fixed coordinate system.
 
 Euler angles are typically denoted as $\alpha, \beta, \gamma$, as shown in the following figure:
 

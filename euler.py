@@ -144,15 +144,15 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
 
         for i in range(6):
             for j in range(6):
-                self.table_cE2.setItem(i, j, QTableWidgetItem(str(float(self.piezoMaterial.stiffness[i, j]))))
+                self.table_cE2.setItem(i, j, QTableWidgetItem(str(format(float(self.piezoMaterial.stiffness[i, j]),'.1f'))))
         
         for i in range(3):
             for j in range(6):
-                self.table_e2.setItem(i, j, QTableWidgetItem(str(float(self.piezoMaterial.piezoelec[i, j]))))
+                self.table_e2.setItem(i, j, QTableWidgetItem(str(format(float(self.piezoMaterial.piezoelec[i, j]),'.1f'))))
         
         for i in range(3):
             for j in range(3):
-                self.table_eS2.setItem(i, j, QTableWidgetItem(str(float(self.piezoMaterial.epsilon[i, j]))))
+                self.table_eS2.setItem(i, j, QTableWidgetItem(str(format(float(self.piezoMaterial.epsilon[i, j]),'.1f'))))
 
 
 
