@@ -6,9 +6,9 @@ import numpy as np
 import json
 from sympy import Matrix, cos, sin, Rational, pprint, ones
 
-from PyQt6.QtWidgets import (QApplication, QMainWindow, QLabel,
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QLabel,
     QTableWidgetItem)
-from PyQt6.QtGui import QIcon, QPixmap
+from PyQt5.QtGui import QIcon, QPixmap
 
 from euler_ui import Ui_MainWindow
 
