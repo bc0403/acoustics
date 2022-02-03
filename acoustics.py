@@ -411,6 +411,63 @@ Quartz_auld = {  # Trig. 32, eSxx, eSzz
     "eSzz": 4.6*epsilon_0
 }
 
+# data from Comsol Multiphysics 5.6
+Quartz_LH_1949 = {  # same as Quartz_auld
+    "rho": 2561e3,  # g/m^3
+    "c11": 8.67362e10,  # Pa
+    "c12": 6.98527e9,
+    "c13": 1.19104e10,
+    "c14": -1.79081e10,
+    "c33": 1.07194e11,
+    "c44": 5.79428e10,
+    "ex1": 0.171,  # C/m^2
+    "ex4": -0.0406,
+    "eSxx": 4.428*epsilon_0,
+    "eSzz": 4.634*epsilon_0
+}
+
+Quartz_RH_1949 = {
+    "rho": 2561e3,  # g/m^3
+    "c11": 8.67362e10,  # Pa
+    "c12": 6.98527e9,
+    "c13": 1.19104e10,
+    "c14": -1.79081e10,
+    "c33": 1.07194e11,
+    "c44": 5.79428e10,
+    "ex1": -0.171,  # C/m^2
+    "ex4": 0.0406,
+    "eSxx": 4.428*epsilon_0,
+    "eSzz": 4.634*epsilon_0
+}
+
+Quartz_LH_1978 = {
+    "rho": 2561e3,  # g/m^3
+    "c11": 8.67362e10,  # Pa
+    "c12": 6.98527e9,
+    "c13": 1.19104e10,
+    "c14": 1.79081e10,
+    "c33": 1.07194e11,
+    "c44": 5.79428e10,
+    "ex1": -0.171,  # C/m^2
+    "ex4": -0.0406,
+    "eSxx": 4.428*epsilon_0,
+    "eSzz": 4.634*epsilon_0
+}
+
+Quartz_RH_1978 = {
+    "rho": 2561e3,  # g/m^3
+    "c11": 8.67362e10,  # Pa
+    "c12": 6.98527e9,
+    "c13": 1.19104e10,
+    "c14": 1.79081e10,
+    "c33": 1.07194e11,
+    "c44": 5.79428e10,
+    "ex1": 0.171,  # C/m^2
+    "ex4": 0.0406,
+    "eSxx": 4.428*epsilon_0,
+    "eSzz": 4.634*epsilon_0
+}
+
 # data from B.A. Auld's book, Appendix 2
 ZnO_auld = {  # Hex. 6mm
     "rho": 5680e3,   # g/m^3

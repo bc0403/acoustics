@@ -7,7 +7,10 @@ This repository contains some notes and applications about how to analysis and d
 
 ## Installation
 
-`pip install -r requirements.txt`
+```
+conda env create -f environment.yml
+conda activate acoustics
+```
 
 ## Description
 

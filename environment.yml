@@ -1,0 +1,9 @@
+name: acoustics
+channels:
+  - defaults
+dependencies:
+  - pyqt
+  - pandas
+  - numpy
+  - matplotlib
+prefix: /Users/hjin/opt/anaconda3/envs/acoustics

@@ -5,8 +5,8 @@ import os
 import json
 import numpy as np
 
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt6.QtGui import QIcon, QPixmap
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtGui import QIcon, QPixmap
 from impulse_ui import Ui_MainWindow
 
 
